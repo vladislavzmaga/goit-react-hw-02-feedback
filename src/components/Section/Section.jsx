@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { StatisticWrapper, StatisticTitle } from './Section.styled';
 
 export const Section = ({ title, children }) => {
@@ -7,4 +9,9 @@ export const Section = ({ title, children }) => {
       {children}
     </StatisticWrapper>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
